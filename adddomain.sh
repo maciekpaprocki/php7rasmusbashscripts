@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# using work from http://blog.justin.kelly.org.au/nginx-domain-setup-script/
 # Info
 # ---
 # script can run with the domain as a command line input
