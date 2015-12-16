@@ -56,13 +56,12 @@ server {
        include php.conf;
 }
 EOF
-) >  $config_dir/sites-available/$DOMAIN.conf
+) >  $config_dir/$DOMAIN.conf
 
 echo "Making web directories"
 mkdir -p $web_root/"$DOMAIN"
 mkdir -p $web_root/"$DOMAIN"/{public,private,log,backup}
-ln -s $config_dir/sites-available/"$DOMAIN".conf $config_dir/sites-enabled/"$DOMAIN".conf
-/etc/init.d/nginx reload
+service nginx reload
 echo "Nginx - reload"
 chown -R www-data:www-data $web_root/"$DOMAIN"
 chmod 755 $web_root/"$DOMAIN"/public
