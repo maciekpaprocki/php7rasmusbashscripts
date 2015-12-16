@@ -66,4 +66,5 @@ echo "Nginx - reload"
 chown -R www-data:www-data $web_root/"$DOMAIN"
 chmod 755 $web_root/"$DOMAIN"/public
 echo "Permissions have been set"
-echo "$DOMAIN has been setup"
+echo "$DOMAIN has been setup in:"
+echo $web_root/"$DOMAIN"/
