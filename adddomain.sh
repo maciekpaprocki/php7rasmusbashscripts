@@ -7,9 +7,9 @@
 # the script will prompt the user for input
 
 #config
-if [ -a confix.sh ]
+if [ -a config.sh ]
     then
-        . confix.sh
+        . config.sh
 else
     . config_default.sh
 fi
